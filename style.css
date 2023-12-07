@@ -1,0 +1,87 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('background.png'); 
+    background-size: cover;
+}
+
+#slot-machine {
+    text-align: center;
+    padding: 20px;
+    background-color: white; /* Оновлено: Змінено колір фону на білий */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#playerName {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#slots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.slot {
+    flex: 0 0 calc(33.33% - 30px);
+    height: 150px;
+    margin: 15px;
+    background-size: cover;
+    max-width: 100%; 
+    position: relative;
+}
+
+.apple,
+.pear,
+.banana {
+    animation: fruitAnimation 1s ease-in-out infinite;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.apple {
+    background-image: url('яблоко.png'); 
+}
+
+.pear {
+    background-image: url('груша.png');
+}
+
+.banana {
+    background-image: url('банан.png'); 
+}
+
+@keyframes fruitAnimation {
+    0% {
+        transform: translateY(0) rotate(0deg); /* Додано обертання */
+    }
+    25% {
+        transform: translateY(-50%) rotate(45deg); 
+    }
+    50% {
+        transform: translateY(0) rotate(90deg); 
+    }
+    75% {
+        transform: translateY(-50%) rotate(135deg); 
+    }
+    100% {
+        transform: translateY(0) rotate(180deg); 
+    }
+}
